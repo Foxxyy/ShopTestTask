@@ -1,0 +1,69 @@
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.topbar {
+  display: flex;
+  flex-direction: row;
+  background-color: grey;
+  width: 100%;
+  justify-content: space-between;
+  &-buttons {
+    display: flex;
+    flex-direction: row;
+  }
+  &-info {
+    display: flex;
+    flex-direction: row;
+    img {
+      height: 75px;
+      width: 75px;
+    }
+    &-counter {
+      display: flex;
+      flex-direction: column;
+      &-elem {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+.mainplace {
+  display: flex;
+
+
+  &-products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    //height: 100%;
+    width: 70vw;
+    justify-content: center;
+    align-content: flex-start;
+    img {
+      width: 300px;
+    }
+    div {
+      display: flex;
+          //background-color: red;
+      flex-direction: column;
+      margin: 30px;
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &-cart {
+    height: 100%;
+    width: 70vw;
+    background-color: green;
+  }
+}

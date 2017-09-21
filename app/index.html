@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../css/shop.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="js/shop.js"></script>
+  </head>
+
+  <body ng-app="shop">
+    <div class="topbar">
+      <div class="topbar-buttons">
+        <h2 ui-sref="mainpage">Main</h2>
+        <h2 ui-sref="cart">Cart</h2>
+      </div>
+      <div class="topbar-info">
+        <img src="img/cart.png"/>
+        <div class="topbar-info-counter" >
+          <div class="topbar-info-counter-elem">
+            <p>In Cart:</p>
+            <p>{{count}} products</p>
+          </div>
+          <div class="topbar-info-counter-elem">
+            <p>Total price:</p>
+            <p>{{totalPrice}} rub.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mainplace" ui-view></div>
+  </body>
+
+</html>
