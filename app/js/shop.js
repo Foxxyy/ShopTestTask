@@ -39,27 +39,31 @@ app.controller("list", function($scope) {
     });
     if (flag)
       cart.push({name, price, count});
-    console.log(cart);
     $scope.prodCount = cart.length;
-    console.log($scope.prodCount);
     var tp = 0;
     cart.forEach(function(item, i, cart) {
       tp += parseInt(item.price) * parseInt(item.count);
     });
     $scope.totalPrice = tp;
-    console.log($scope.totalPrice);
 
   }
 });
 
 app.controller("cart", function($scope) {
-  console.log(cart);
   $scope.cart = cart;
+
   var tp = 0;
   cart.forEach(function(item, i, cart) {
     tp += parseInt(item.price) * parseInt(item.count);
   });
   $scope.total = tp;
+
+  var c = 0;
+  cart.forEach(function(item, i, cart) {
+    c += item.count;
+  });
+  $scope.prodCount = c;
+
   $scope.delete = function(name) {
     cart.forEach(function(item, i, cart) {
       if (name == item.name) {
