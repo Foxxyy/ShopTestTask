@@ -1,1 +1,23 @@
-<div class="cart"></div>
+<h1 ng-hide="cart.length != 0" ng-controller="cart">Your cart is empty :(</h1>
+<div class="mainplace-cart" ng-controller="cart" ng-hide="cart.length == 0">
+  <div class="mainplace-cart-block" ng-repeat="x in cart">
+    <img src="img/prod.jpg" />
+    <div  class="mainplace-cart-block-info">
+      <h2>{{x.name}}</h2>
+      <p>{{x.price}} rub.</p>
+      <div  class="mainplace-cart-block-info-price">
+        <h3>Count: </h3>
+        <input type="number" ng-model="x.count" />
+        <h3>Total: </h3>
+        <p>{{x.price * x.count}} rub.</p>
+        <img src="img/delete.png" ng-click="delete(x.name)"/>
+      </div>
+    </div>
+  </div>
+  <h1>Total price:</h1>
+  <h2>{{total}}</h2>
+  <div class="mainplace-cart-button">
+    <img src="img/cart.png"/>
+    <p>buy</p>
+  </div>
+</div>

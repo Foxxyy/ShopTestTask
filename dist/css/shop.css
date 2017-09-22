@@ -1,8 +1,8 @@
 body {
   margin: 0;
   display: flex;
+  position: relative;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 .topbar {
@@ -11,18 +11,30 @@ body {
   background-color: grey;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
 }
 .topbar-buttons {
   display: flex;
   flex-direction: row;
+  align-items: center;
+}
+.topbar-buttons h2 {
+  margin: 10px;
+  cursor: pointer;
 }
 .topbar-info {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .topbar-info img {
-  height: 75px;
-  width: 75px;
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+.topbar-info p {
+  margin: 0;
+  padding: 2px;
 }
 .topbar-info-counter {
   display: flex;
@@ -32,21 +44,18 @@ body {
   display: flex;
   flex-direction: row;
 }
-.mainplace {
-  display: flex;
-}
 .mainplace-products {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 70vw;
+  width: 75vw;
   justify-content: center;
   align-content: flex-start;
 }
 .mainplace-products img {
   width: 300px;
 }
-.mainplace-products div {
+.mainplace-products-block {
   display: flex;
   flex-direction: column;
   margin: 30px;
@@ -54,8 +63,182 @@ body {
   justify-content: center;
   align-items: center;
 }
+.mainplace-products-block h2 {
+  margin: 0;
+}
+.mainplace-products-block p {
+  font-size: 16pt;
+}
+.mainplace-products-block-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #c4c4c4;
+  cursor: pointer;
+}
+.mainplace-products-block-button img {
+  width: 30px;
+  height: 30px;
+}
+.mainplace-products-block-button p {
+  margin: 0;
+}
 .mainplace-cart {
-  height: 100%;
-  width: 70vw;
-  background-color: green;
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  width: 60vw;
+}
+.mainplace-cart h1 {
+  align-self: flex-end;
+  margin: 0;
+}
+.mainplace-cart h2 {
+  align-self: flex-end;
+  margin: 0;
+}
+.mainplace-cart-block {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.mainplace-cart-block img {
+  width: 300px;
+  height: 190px;
+  padding: 10px;
+}
+.mainplace-cart-block-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+}
+.mainplace-cart-block-info h2 {
+  margin: 0;
+  align-self: flex-start;
+  font-size: 2em;
+}
+.mainplace-cart-block-info p {
+  margin-top: 5;
+  margin-bottom: 0;
+  font-size: 1.5em;
+}
+.mainplace-cart-block-info-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.mainplace-cart-block-info-price p {
+  margin: 0;
+}
+.mainplace-cart-block-info-price h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+.mainplace-cart-block-info-price img {
+  width: 35px;
+  height: 35px;
+}
+.mainplace-cart-block-info-price input {
+  width: 50px;
+}
+.mainplace-cart-button {
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #66c477;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.mainplace-cart-button img {
+  width: 40px;
+  height: 40px;
+}
+.mainplace-cart-button p {
+  font-size: 25pt;
+  margin: 0;
+}
+.modalface-dialog {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.modalface-dialog img {
+  width: 300px;
+  height: 190px;
+}
+.modalface-dialog-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.modalface-dialog-info-headers {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-right: 30px;
+}
+.modalface-dialog-info-headers h2 {
+  margin: 0px;
+}
+.modalface-dialog-info-values {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin: 0;
+}
+.modalface-dialog-info-values input {
+  width: 40px;
+}
+.modalface-dialog-info-values h2 {
+  margin: 0px;
+}
+.modalface-button {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #66c477;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.modalface-button img {
+  width: 40px;
+  height: 40px;
+}
+.modalface-button p {
+  font-size: 25pt;
+  margin: 0;
 }

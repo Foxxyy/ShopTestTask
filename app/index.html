@@ -2,9 +2,11 @@
   <head>
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="../css/shop.css" />
+    <link rel="stylesheet" type="text/css" href="modal/ng-modal.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="js/shop.js"></script>
+    <script src="modal/ng-modal.js"></script>
   </head>
 
   <body ng-app="shop">
@@ -13,16 +15,16 @@
         <h2 ui-sref="mainpage">Main</h2>
         <h2 ui-sref="cart">Cart</h2>
       </div>
-      <div class="topbar-info">
+      <div class="topbar-info" ng-controller="list">
         <img src="img/cart.png"/>
         <div class="topbar-info-counter" >
           <div class="topbar-info-counter-elem">
             <p>In Cart:</p>
-            <p>{{count}} products</p>
+            <p>{{prodCount}} lol</p>
           </div>
           <div class="topbar-info-counter-elem">
             <p>Total price:</p>
-            <p>{{totalPrice}} rub.</p>
+            <p>{{totalPrice}}</p>
           </div>
         </div>
       </div>
